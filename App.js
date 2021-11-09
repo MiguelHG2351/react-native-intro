@@ -1,12 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import LoginForm from './src/components/loginForm';
+import Saludar from './src/components/Saludar';
+
 export default function App() {
+  function onChangeText() {
+    console.log('onChangeText');
+  }
+  
   return (
     <View style={styles.container}>
       <Text>Siuuuuuuuuuuuuuuuuu!</Text>
-      <StatusBar style="auto" />
+      <Text>Xd</Text>
+      <Saludar firstName="Russell"/>
+      <Saludar firstName="Andre" lastName="Valentin"/>
+      <LoginForm onChangeText={onChangeText} />
     </View>
   );
 }
