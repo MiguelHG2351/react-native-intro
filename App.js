@@ -1,30 +1,14 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
-import LoginForm from './src/components/loginForm';
-import Saludar from './src/components/Saludar';
+import { NavigationTab } from './src/components/NavigationTab';
+import Screens from './src/screens';
+import { NavigationDrawer } from './src/components/NavigationDrawer';
 
 export default function App() {
-  function onChangeText() {
-    console.log('onChangeText');
-  }
-  
-  return (
-    <View style={styles.container}>
-      <Text>Siuuuuuuuuuuuuuuuuu!</Text>
-      <Text>Xd</Text>
-      <Saludar firstName="Russell"/>
-      <Saludar firstName="Andre" lastName="Valentin"/>
-      <LoginForm onChangeText={onChangeText} />
-    </View>
-  );
+  return <NavigationContainer>
+    {/* <NavigationTab /> */}
+      {/* <Screens /> */}
+      <NavigationDrawer />
+    </NavigationContainer>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
